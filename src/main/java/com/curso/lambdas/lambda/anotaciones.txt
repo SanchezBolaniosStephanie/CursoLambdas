@@ -1,0 +1,23 @@
+
+Una interfáz funcional contiene un solo método abstracto
+En spring se utiliza la anotación @FunctionalInterface para definir que es una interfaz funcional
+la interfaz funcional se caracteriza por tener un solo metodo abstracto, puede contener varios metodos por default y privados.
+
+Expresión Lambda
+Es una subrutina definida no enlazada a un identificador. Implementación de una interfaz funcional mediante una clase anonimoa.
+Sintaxis:
+
+(x,y) -> {return x+y;}
+(parametros, si son necesarios) (-> indica qie es una expresión lambda) (desarrollo del método)
+
+Inferencia de párametros (apartir de java 9)
+Ocurre cuando el compilador puede deducir el tipo de datos en los parámetros y no es necesario especificarlo, ya que en la declaración del método se define.
+ejemplos:
+Argumentos de método:
+(Double a, String b)
+Inferencia:
+(a, b)
+a partir de java 9
+(var a, var b)
+
+

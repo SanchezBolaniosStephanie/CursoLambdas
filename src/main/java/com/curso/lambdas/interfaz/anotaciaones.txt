@@ -1,0 +1,18 @@
+Interfaz.
+Se refiere a un contrato donde se definen los métodos que deberan sobreescribir las clases donde se implemente la interfaz.
+Las interfaces apoyan a la codificación generica, ya que si se requiere se definen metodos genericos para especificar en la implemnetación el tipo de datos que se trate y el desarrollo de métodos para cada uno en la sobreescritura
+
+A partir de Java 9 los métodos en las interfaces pueden ser public, static, private y default
+
+Nomenclatura para los parámetros de tipo:
+<E> Elemento
+<K> Llave : usado para Hashmaps
+<N> Número
+<T> Tipo : como objetos
+<V> Valor : usado para HashMaps
+
+
+Clase anonima.
+
+En Java es la implementación rápida de una clase abstracta o una interfaz, para las cuales se tendra un solo uso, sin necesidad de crear un archivo por separado
+La clase anonima es una clase interna, ya que se instancea dentro de la clase que se necesita
