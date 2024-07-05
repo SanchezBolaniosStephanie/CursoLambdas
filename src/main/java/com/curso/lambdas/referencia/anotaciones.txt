@@ -1,0 +1,32 @@
+Llamadas a metodos.
+
+A partir de Java 8, la llamada a metodos es la sustitución de una expresión lambda que solamente manda a llamar un método,
+el compilador infiere el tipo de variables.
+Sintaxis:
+
+(clase u objeto) :: (operador que indica que un metodo sera referenciado)(nombre del metodo)
+
+ Tipos de referencias a métodos:
+ Método estatico
+     Referencia método:
+     String::valueOf
+     Expresión lambda:
+     s->String.valueOf(s)
+
+ Método de un objeto especifico:
+    Referencia método:
+    var r = new Random() r::nextInt
+    Expresión lambda:
+    var r = new Random() n -> r.nextInt(n)
+
+ Método arbitrario:
+    Referencia método:
+    String::equals
+    Expresión lambda:
+    (s1,s2)->s1.equals(s2)
+
+ Método constructor:
+    Referencia método:
+    Person::new
+    Expresión lambda:
+    a->new Person(a)
