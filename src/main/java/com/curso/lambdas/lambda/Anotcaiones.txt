@@ -1,0 +1,3 @@
+Complejidad ciclomatica:
+
+anidacion de muchos ciclos en codigo, lo recomendable es tener ciclos aninados de 5 a 7 condiciones

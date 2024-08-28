@@ -1,0 +1,8 @@
+Los streams representan una serie de elementos de un mismo tipo, que admite operaciones
+agregadas. caracteristicas:
+Secuencia de elementos: una secuencia obtiene o calcula elementos, pero no los guarda
+Fuente: toma recuersos de E/S como entradas
+Operaciones agregadas: admite operaciones que se añaden a la funcionalidad intermedias y finales
+Canalizacion: exiten metodos intermedios, que realizan operaciones con resultados que devuelven
+a la variable inicial; y métodos finales que procesan los elementos de forma conclusiva.
+Iteracion automaticas: realiza iteracion internamente.

@@ -1,0 +1,76 @@
+Tipo de interfaces funcionales
+Consumers. Expresiones lambda que aceptan un unico valor y no devuelven nada
+String message -> System.out.println(message);
+Suppliers. No tienen parametros pero regresan un valor
+() -> return createRandomInteger();
+Function. Aceptan y devuelven un valor, no tiene que ser del mismo tipo.
+Order persistedOrder -> persistedOrder.getIdentifier();
+Predicates. Aceptan un valor y devuelven un valor lógico.
+String meesage -> message.length > 50
+
+java.util.function
+
+Ubicacion donde se encuentran las interfaces funcionalies que provee java.
+esta presente a partir de java 8
+
+Interface Function<T,V>
+Representa una funcion que acecpta un argumentos y produce un resultado
+
+método aplay:
+aplica el desarrollo de bloque que se le indica.
+andThen:
+concatena métodos, ejecuta el primero que lo invoca y sigue con el resultado
+compose:
+similiar a andThen, en este caso ejecuta primeramente el resultado y luego quien lo invoca
+
+ejemplos de compose y andThen
+
+se tiene la funcion:
+Function<Integer, String> iToHex = i -> "'" + Integer.toHexString(i) + "'";
+en este caso que la función ya existe conviene usar andThen:
+Function<Integer, String> itoUpperHex = iToHex.andThen(String::toUpperCase);
+en lugar de compose:
+Function<Integer,String> itoUpperHex
+                       = ((Function<String,String>)String::toUpperCase).compose(iToHex);
+
+en el caso de:
+Function<String, String> quote = s -> "'" + s + "'";
+conviene usar compose:
+Function<Integer, String> iToHex = quote.compose(Integer::toHexString);
+en lugar de andThen:
+Function<Integer, String> iToHex = ((Function<Integer, String>) Integer::toHexString).andThen(quote);
+
+Interface BiFunction<T,V,R>
+Representa una funcion que acepta dos argumentos y produce un resultado
+
+Inteface Predicate<T>
+Representa un predicado (una función que devuelve un boolean)
+
+Inteface BiPredicate<T,U>
+Representa un predicado (una función que devuelve un boolean) con dos argumentos
+
+Interface Consumer<T>
+Representa una operación que acepta un único argumento de entrada y no devuelve
+ningun resultado
+
+Interface BiConsumer<T>
+Representa una operación que acepta un único argumento de entrada y no devuelve
+ningun resultado, recibe dos parametros
+
+Suplier<T>
+Representa una operación que provee un objeto y no requiere parametros
+
+UnaryOperator<T>
+Extiende de Function, el tipo del argumento de entrada será tambien el tipo del retorno
+
+
+
+Serialización:
+
+La conversión de datos a binario para ser expueso a la transacción a una base de datos por ejemplo en
+una funcion REST o en envíos web, de igual forma se reciben los objetos de forma binaria, para lo que
+se deben de serializar para recibir los datos y manejarlos
+
+java.io.Serializable
+Interfaz Serializable
+cuando una clase implementa la interfaz serializable puede convertir los datos en binarios o bicerversa

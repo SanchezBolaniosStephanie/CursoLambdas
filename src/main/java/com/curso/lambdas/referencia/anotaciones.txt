@@ -30,3 +30,6 @@ Sintaxis:
     Person::new
     Expresión lambda:
     a->new Person(a)
+
+    La referencia a metodos se puede utilizar cuando la expresión lambda tiene como unica instruccion
+    llamar a un método cuyos parametros son la entrada de la expresión sin modificaciones

@@ -5,10 +5,15 @@ la interfaz funcional se caracteriza por tener un solo metodo abstracto, puede c
 
 Expresión Lambda
 Es una subrutina definida no enlazada a un identificador. Implementación de una interfaz funcional mediante una clase anonimoa.
+las expresiones Lambda son funciones anonimas.
+las funciones anonimas no necesitan ser instanciadas de una clase
 Sintaxis:
 
 (x,y) -> {return x+y;}
 (parametros, si son necesarios) (-> indica qie es una expresión lambda) (desarrollo del método)
+los parentesis al inicio son
+necesarios si se tiene uno o
+mas parámetros o no se tienen
 
 Inferencia de párametros (apartir de java 9)
 Ocurre cuando el compilador puede deducir el tipo de datos en los parámetros y no es necesario especificarlo, ya que en la declaración del método se define.
